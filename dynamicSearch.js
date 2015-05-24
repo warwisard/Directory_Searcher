@@ -10,7 +10,7 @@ dynamicSearch.directive('searcherDirective', function () {
 		+'<span ng-style="getStyle()" ng-repeat="item in searchObjectArray">'
             +'<div class="horOrVert" ng-class="getVertClass()" ng-style="getVertical()">'
             +'<label for="{{displayObject[item.key]}}">{{displayObject[item.key]}}</label>'
-			+'<select id="{{displayObject[item.key]}}" class="dynamicSearch" id="chosen_{{item.key}}" data-placeholder="Select Last Name" ng-model="changeSearch.edit[item.key]" ng-options="item for item in checkforDups(' + "'" + '{{item.key}}' + "'" + ')" chosen>'
+			+'<select id="{{displayObject[item.key]}}" class="dynamicSearch" id="chosen_{{item.key}}" data-placeholder="Select {{displayObject[item.key]}}" ng-model="changeSearch.edit[item.key]" ng-options="item for item in checkforDups(' + "'" + '{{item.key}}' + "'" + ')" chosen>'
 			+'</select>'
         +'</div>'
         +'</span>'
